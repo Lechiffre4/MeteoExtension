@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "proxy": "https://api-canadian-weather-ip4jgtufz-shaouchet.vercel.app/weather/147",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },

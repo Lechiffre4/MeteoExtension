@@ -8,13 +8,12 @@ function Popup() {
 
 	useEffect(() => {
 		console.log("test");
-		fetch("https://meteo.gc.ca/api/app/fr/Location/QC-147?type=147", {
+		fetch("https://bewildered-pleat-foal.cyclic.app/weather/147", {
 			method: "GET",
-			mode: 'no-cors'
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				setTemperature(data);
+				setTemperature(JSON.stringify(data));
 				console.log(data);
 			})
 			.catch((error) => console.log(error));
@@ -23,7 +22,7 @@ function Popup() {
 	return (
 		<div>
 			<h2>Data:</h2>
-			{Temperature}
+			<p>{Temperature}</p>
 		</div>
 	);
 }
